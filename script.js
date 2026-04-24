@@ -1,83 +1,65 @@
-/* ==========================================================================
-   Birchmont Group Inc. — Landing Page Scripts
-   ========================================================================== */
-
 (function () {
     'use strict';
 
-    // ---------- Nav: solid background on scroll ----------
-    const nav = document.getElementById('nav');
-    const onScroll = () => {
-        if (window.scrollY > 24) {
-            nav.classList.add('is-scrolled');
-        } else {
-            nav.classList.remove('is-scrolled');
-        }
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function () {
+        nav.classList.toggle('is-scrolled', window.scrollY > 32);
+    }, { passive: true });
 
-    // ---------- Mobile menu toggle ----------
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.querySelector('.nav__links');
+    var navToggle = document.getElementById('navToggle');
+    var navLinks = document.querySelector('.nav__links');
     if (navToggle && navLinks) {
-        navToggle.addEventListener('click', () => {
-            const open = navLinks.classList.toggle('is-open');
-            navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        navToggle.addEventListener('click', function () {
+            var open = navLinks.classList.toggle('is-open');
+            navToggle.setAttribute('aria-expanded', String(open));
         });
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
+        navLinks.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
                 navLinks.classList.remove('is-open');
                 navToggle.setAttribute('aria-expanded', 'false');
             });
         });
     }
 
-    // ---------- Hero entrance: reveal immediately on load ----------
-    const heroReveals = document.querySelectorAll('.hero .reveal');
-    window.addEventListener('load', () => {
-        heroReveals.forEach(el => {
-            const delay = parseInt(el.dataset.delay || '0', 10);
-            setTimeout(() => el.classList.add('is-visible'), delay);
-        });
-    });
-    // Fallback if load event already fired
-    if (document.readyState === 'complete') {
-        heroReveals.forEach(el => {
-            const delay = parseInt(el.dataset.delay || '0', 10);
-            setTimeout(() => el.classList.add('is-visible'), delay);
+    function triggerReveals(els) {
+        els.forEach(function (el) {
+            var delay = parseInt(el.dataset.delay || '0', 10);
+            setTimeout(function () { el.classList.add('is-visible'); }, delay);
         });
     }
 
-    // ---------- Scroll-triggered reveals ----------
-    const sectionReveals = document.querySelectorAll('.section .reveal');
+    var heroReveals = document.querySelectorAll('.hero .reveal');
+    if (document.readyState === 'complete') {
+        triggerReveals(heroReveals);
+    } else {
+        window.addEventListener('load', function () { triggerReveals(heroReveals); });
+    }
+
+    var sectionReveals = document.querySelectorAll('.section .reveal');
     if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
+        var io = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
-                    const el = entry.target;
-                    const delay = parseInt(el.dataset.delay || '0', 10);
-                    setTimeout(() => el.classList.add('is-visible'), delay);
+                    var el = entry.target;
+                    var delay = parseInt(el.dataset.delay || '0', 10);
+                    setTimeout(function () { el.classList.add('is-visible'); }, delay);
                     observer.unobserve(el);
                 }
             });
-        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-
-        sectionReveals.forEach(el => io.observe(el));
+        }, { threshold: 0.12, rootMargin: '0px 0px -32px 0px' });
+        sectionReveals.forEach(function (el) { io.observe(el); });
     } else {
-        sectionReveals.forEach(el => el.classList.add('is-visible'));
+        sectionReveals.forEach(function (el) { el.classList.add('is-visible'); });
     }
 
-    // ---------- Contact form (UI only) ----------
-    const form = document.getElementById('contactForm');
-    const status = document.getElementById('formStatus');
+    var form = document.getElementById('contactForm');
+    var status = document.getElementById('formStatus');
     if (form && status) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', function (e) {
             e.preventDefault();
-            const name = form.name.value.trim();
-            const email = form.email.value.trim();
-            const message = form.message.value.trim();
-
+            var name = form.name.value.trim();
+            var email = form.email.value.trim();
+            var message = form.message.value.trim();
             if (!name || !email || !message) {
                 status.textContent = 'Please fill in all fields.';
                 return;
@@ -86,8 +68,7 @@
                 status.textContent = 'Please enter a valid email address.';
                 return;
             }
-
-            status.textContent = 'Thank you — your message has been noted. We will be in touch shortly.';
+            status.textContent = 'Thank you. We’ll be in touch.';
             form.reset();
         });
     }
