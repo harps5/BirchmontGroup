@@ -1,11 +1,15 @@
 (function () {
     'use strict';
 
+    // --- Nav scroll ---
     var nav = document.getElementById('nav');
-    window.addEventListener('scroll', function () {
-        nav.classList.toggle('is-scrolled', window.scrollY > 32);
-    }, { passive: true });
+    if (nav) {
+        window.addEventListener('scroll', function () {
+            nav.classList.toggle('is-scrolled', window.scrollY > 32);
+        }, { passive: true });
+    }
 
+    // --- Mobile menu toggle ---
     var navToggle = document.getElementById('navToggle');
     var navLinks = document.querySelector('.nav__links');
     if (navToggle && navLinks) {
@@ -21,6 +25,37 @@
         });
     }
 
+    // --- Dropdown nav ---
+    document.querySelectorAll('.nav__dropdown').forEach(function (dropdown) {
+        var trigger = dropdown.querySelector('.nav__dropdown-trigger');
+        var menu = dropdown.querySelector('.nav__dropdown-menu');
+        if (!trigger || !menu) return;
+
+        trigger.addEventListener('click', function (e) {
+            e.preventDefault();
+            var isOpen = menu.classList.toggle('is-open');
+            trigger.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        // Close on outside click (desktop)
+        document.addEventListener('click', function (e) {
+            if (!dropdown.contains(e.target)) {
+                menu.classList.remove('is-open');
+                trigger.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && menu.classList.contains('is-open')) {
+                menu.classList.remove('is-open');
+                trigger.setAttribute('aria-expanded', 'false');
+                trigger.focus();
+            }
+        });
+    });
+
+    // --- Reveal animations ---
     function triggerReveals(els) {
         els.forEach(function (el) {
             var delay = parseInt(el.dataset.delay || '0', 10);
@@ -28,7 +63,7 @@
         });
     }
 
-    var heroReveals = document.querySelectorAll('.hero .reveal');
+    var heroReveals = document.querySelectorAll('.hero .reveal, .design-hero .reveal, .page-hero .reveal');
     if (document.readyState === 'complete') {
         triggerReveals(heroReveals);
     } else {
@@ -52,14 +87,15 @@
         sectionReveals.forEach(function (el) { el.classList.add('is-visible'); });
     }
 
+    // --- Contact form (parent-level, UI-only) ---
     var form = document.getElementById('contactForm');
     var status = document.getElementById('formStatus');
     if (form && status) {
         form.addEventListener('submit', function (e) {
             e.preventDefault();
-            var name = form.name.value.trim();
-            var email = form.email.value.trim();
-            var message = form.message.value.trim();
+            var name = form.querySelector('[name="name"]').value.trim();
+            var email = form.querySelector('[name="email"]').value.trim();
+            var message = form.querySelector('[name="message"]').value.trim();
             if (!name || !email || !message) {
                 status.textContent = 'Please fill in all fields.';
                 return;

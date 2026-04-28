@@ -6,9 +6,7 @@
     <title>Birchmont Group Inc. | Building. Operating. Growing.</title>
     <meta name="description" content="Birchmont Group Inc. is a Calgary-based holding company that builds, acquires, and operates enduring businesses.">
     <meta name="author" content="Birchmont Group Inc.">
-
     <link rel="canonical" href="https://birchmontgroup.ca/">
-
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://birchmontgroup.ca/">
     <meta property="og:title" content="Birchmont Group Inc. | Building. Operating. Growing.">
@@ -17,13 +15,11 @@
     <meta property="og:image" content="https://birchmontgroup.ca/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://birchmontgroup.ca/og-image.png">
-
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -39,36 +35,19 @@
             "addressCountry": "CA"
         },
         "foundingDate": "2024",
-        "email": "info@birchmontgroup.ca",
-        "sameAs": []
+        "email": "info@birchmontgroup.ca"
     }
     </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Birchmont Group Inc.",
-        "url": "https://birchmontgroup.ca",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://birchmontgroup.ca/#{search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
-    <!-- NAVIGATION -->
     <header class="nav" id="nav">
         <div class="nav__inner">
-            <a href="#top" class="nav__logo" aria-label="Birchmont Group home">
+            <a href="/" class="nav__logo" aria-label="Birchmont Group home">
                 <div class="logo" aria-hidden="true">
                     <span class="logo__primary">BIRCHMONT</span>
                     <span class="logo__divider"></span>
@@ -76,9 +55,16 @@
                 </div>
             </a>
             <nav class="nav__links" aria-label="Primary">
-                <a href="#about">About</a>
-                <a href="#philosophy">Philosophy</a>
-                <a href="#contact">Contact</a>
+                <a href="/">Home</a>
+                <a href="/about/">About</a>
+                <div class="nav__dropdown">
+                    <button class="nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">Divisions <svg class="nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.2"/></svg></button>
+                    <div class="nav__dropdown-menu">
+                        <a href="/divisions/">All Divisions</a>
+                        <a href="/divisions/design/">Design Services</a>
+                    </div>
+                </div>
+                <a href="/contact/">Contact</a>
             </nav>
             <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
                 <span></span><span></span>
@@ -86,7 +72,7 @@
         </div>
     </header>
 
-    <main id="top">
+    <main>
 
         <!-- HERO -->
         <section class="hero" aria-labelledby="heroTitle">
@@ -94,7 +80,7 @@
             <div class="hero__ambient" aria-hidden="true"></div>
             <div class="hero__content">
                 <div class="hero__logo reveal" data-delay="0">
-                    <span class="hero__logo-primary">BIRCHMONT</span>
+                    <span class="hero__logo-primary" id="heroTitle">BIRCHMONT</span>
                     <div class="hero__logo-rule"></div>
                     <span class="hero__logo-secondary">GROUP</span>
                 </div>
@@ -103,135 +89,70 @@
             </div>
             <div class="hero__bottom">
                 <span class="hero__location reveal" data-delay="600">Calgary, Alberta</span>
-                <a href="#about" class="hero__scroll reveal" data-delay="600" aria-label="Scroll down">
+                <a href="#philosophy" class="hero__scroll reveal" data-delay="600" aria-label="Scroll down">
                     <span class="hero__scroll-line"></span>
                 </a>
                 <span class="hero__est reveal" data-delay="600">Est. 2024</span>
             </div>
         </section>
 
-        <!-- ABOUT -->
-        <section class="about section" id="about">
+        <!-- PHILOSOPHY TEASER -->
+        <section class="section" id="philosophy">
             <div class="container">
                 <div class="about__layout">
                     <div class="about__intro">
-                        <span class="label reveal">Who We Are</span>
-                        <h2 class="heading reveal">A holding company<br> built on conviction.</h2>
+                        <span class="label reveal">Our Philosophy</span>
+                        <h2 class="heading reveal">Operator-first.<br>Long-term by design.</h2>
                     </div>
                     <div class="about__body">
-                        <p class="about__text reveal">Birchmont Group Inc. is a privately held, Calgary-based holding company. We build, acquire, and operate businesses with a long-term perspective and an operator-first discipline.</p>
-                        <p class="about__text reveal" data-delay="80">Our portfolio spans multiple sectors. In each, we seek the same thing: strong fundamentals, capable teams, and room to compound value over decades &mdash; not quarters.</p>
-                    </div>
-                </div>
-
-                <div class="about__divider reveal"></div>
-
-                <div class="stats reveal">
-                    <div class="stat">
-                        <span class="stat__value">Calgary</span>
-                        <span class="stat__label">Headquarters</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat__value">2024</span>
-                        <span class="stat__label">Founded</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat__value">Multi-Sector</span>
-                        <span class="stat__label">Portfolio</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat__value">Long-term</span>
-                        <span class="stat__label">Investment Horizon</span>
+                        <p class="about__text reveal">We don&rsquo;t observe from a distance. We build, acquire, and operate businesses with the same standards we&rsquo;d expect as customers. No short plays. No flips. Just patient, disciplined growth.</p>
+                        <a href="/about/" class="text-link reveal" data-delay="80">Learn more about our approach &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PHILOSOPHY -->
-        <section class="philosophy section section--dark" id="philosophy">
+        <!-- DIVISIONS PREVIEW -->
+        <section class="section section--dark" id="divisions">
             <div class="container">
-                <div class="philosophy__head">
-                    <span class="label label--gold reveal">Our Philosophy</span>
-                    <h2 class="heading heading--light reveal">Principles over<br> performance theatre.</h2>
+                <div class="section-head">
+                    <span class="label label--gold reveal">Our Divisions</span>
+                    <h2 class="heading heading--light reveal">What we operate.</h2>
                 </div>
 
-                <div class="philosophy__grid">
-                    <div class="philosophy__item reveal" data-delay="0">
-                        <div class="philosophy__number">01</div>
-                        <div class="philosophy__content">
-                            <h3 class="philosophy__title">Operator-First</h3>
-                            <p class="philosophy__desc">We don&rsquo;t observe from a distance. We run our businesses day-to-day with the same standards we&rsquo;d expect as customers.</p>
+                <div class="division-cards">
+                    <a href="/divisions/design/" class="division-card reveal">
+                        <div class="division-card__inner">
+                            <span class="division-card__label">Design Services</span>
+                            <h3 class="division-card__title">Birchmont Design Services</h3>
+                            <p class="division-card__desc">Web design, hosting, and ongoing site management for small and medium businesses.</p>
+                            <span class="division-card__link">View division &rarr;</span>
                         </div>
-                    </div>
+                    </a>
+                </div>
 
-                    <div class="philosophy__item reveal" data-delay="120">
-                        <div class="philosophy__number">02</div>
-                        <div class="philosophy__content">
-                            <h3 class="philosophy__title">Permanent Capital</h3>
-                            <p class="philosophy__desc">No exits. No flips. We acquire and build with the intention of holding indefinitely. Patience is our competitive advantage.</p>
-                        </div>
-                    </div>
-
-                    <div class="philosophy__item reveal" data-delay="240">
-                        <div class="philosophy__number">03</div>
-                        <div class="philosophy__content">
-                            <h3 class="philosophy__title">Disciplined Growth</h3>
-                            <p class="philosophy__desc">We expand only when the foundation is solid. Speed without structure is a liability. Every acquisition earns its place.</p>
-                        </div>
-                    </div>
+                <div class="divisions-cta reveal">
+                    <a href="/divisions/" class="text-link text-link--gold">View all divisions &rarr;</a>
                 </div>
             </div>
         </section>
 
-        <!-- QUOTE / INTERLUDE -->
-        <section class="interlude section">
-            <div class="container container--narrow">
-                <blockquote class="interlude__quote reveal">
-                    <p>&ldquo;We believe the best businesses are built quietly &mdash; with discipline, patience, and an unwavering commitment to the fundamentals.&rdquo;</p>
-                </blockquote>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section class="contact section section--dark" id="contact">
-            <div class="container container--narrow">
-                <div class="contact__head">
-                    <span class="label label--gold reveal">Contact</span>
-                    <h2 class="heading heading--light reveal">Let&rsquo;s talk.</h2>
-                    <p class="contact__sub reveal">For partnership inquiries, business opportunities, or general questions.</p>
-                </div>
-
-                <a href="mailto:info@birchmontgroup.ca" class="contact__email reveal">info@birchmontgroup.ca</a>
-                <p class="contact__location reveal">Calgary, Alberta, Canada</p>
-
-                <form class="contact__form reveal" id="contactForm" novalidate>
-                    <div class="field">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" autocomplete="name" required>
-                    </div>
-                    <div class="field">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" autocomplete="email" required>
-                    </div>
-                    <div class="field field--full">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <div class="field field--full">
-                        <button type="submit" class="btn">Send Message</button>
-                    </div>
-                    <p class="form-status" id="formStatus" aria-live="polite"></p>
-                </form>
+        <!-- CTA -->
+        <section class="section">
+            <div class="container container--narrow" style="text-align:center;">
+                <span class="label reveal">Get in Touch</span>
+                <h2 class="heading reveal">Ready to talk?</h2>
+                <p class="about__text reveal" style="margin:24px auto 40px;max-width:48ch;text-align:center;">For partnership inquiries, business opportunities, or general questions &mdash; we&rsquo;d like to hear from you.</p>
+                <a href="/contact/" class="btn reveal">Contact Us</a>
             </div>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">
-                <a href="#top" class="footer__logo" aria-label="Birchmont Group home">
+                <a href="/" class="footer__logo" aria-label="Birchmont Group home">
                     <div class="logo logo--sm" aria-hidden="true">
                         <span class="logo__primary">BIRCHMONT</span>
                         <span class="logo__divider"></span>
@@ -239,14 +160,15 @@
                     </div>
                 </a>
                 <div class="footer__links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms</a>
+                    <a href="/about/">About</a>
+                    <a href="/divisions/">Divisions</a>
+                    <a href="/contact/">Contact</a>
                 </div>
                 <p class="footer__copy">&copy; 2026 Birchmont Group Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>

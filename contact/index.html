@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Birchmont Group Inc.</title>
+    <meta name="description" content="Get in touch with Birchmont Group Inc. For partnership inquiries, business opportunities, or general questions.">
+    <link rel="canonical" href="https://birchmontgroup.ca/contact/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://birchmontgroup.ca/contact/">
+    <meta property="og:title" content="Contact | Birchmont Group Inc.">
+    <meta property="og:description" content="For partnership inquiries, business opportunities, or general questions.">
+    <meta property="og:site_name" content="Birchmont Group Inc.">
+    <meta property="og:image" content="https://birchmontgroup.ca/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    <header class="nav" id="nav">
+        <div class="nav__inner">
+            <a href="/" class="nav__logo" aria-label="Birchmont Group home">
+                <div class="logo" aria-hidden="true">
+                    <span class="logo__primary">BIRCHMONT</span>
+                    <span class="logo__divider"></span>
+                    <span class="logo__secondary">GROUP</span>
+                </div>
+            </a>
+            <nav class="nav__links" aria-label="Primary">
+                <a href="/">Home</a>
+                <a href="/about/">About</a>
+                <div class="nav__dropdown">
+                    <button class="nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">Divisions <svg class="nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.2"/></svg></button>
+                    <div class="nav__dropdown-menu">
+                        <a href="/divisions/">All Divisions</a>
+                        <a href="/divisions/design/">Design Services</a>
+                    </div>
+                </div>
+                <a href="/contact/" class="is-active">Contact</a>
+            </nav>
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-hero section--dark">
+            <div class="container">
+                <span class="label label--gold reveal">Contact</span>
+                <h1 class="heading heading--light heading--page reveal">Let&rsquo;s talk.</h1>
+                <p class="page-hero__sub reveal">For partnership inquiries, business opportunities, or general questions.</p>
+            </div>
+        </section>
+
+        <section class="contact section section--dark" style="padding-top:0;">
+            <div class="container container--narrow">
+
+                <a href="mailto:info@birchmontgroup.ca" class="contact__email reveal">info@birchmontgroup.ca</a>
+                <p class="contact__location reveal">Calgary, Alberta, Canada</p>
+
+                <form class="contact__form reveal" id="contactForm" novalidate>
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="field field--full">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <div class="field field--full">
+                        <button type="submit" class="btn">Send Message</button>
+                    </div>
+                    <p class="form-status" id="formStatus" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="/" class="footer__logo" aria-label="Birchmont Group home">
+                    <div class="logo logo--sm" aria-hidden="true">
+                        <span class="logo__primary">BIRCHMONT</span>
+                        <span class="logo__divider"></span>
+                        <span class="logo__secondary">GROUP</span>
+                    </div>
+                </a>
+                <div class="footer__links">
+                    <a href="/about/">About</a>
+                    <a href="/divisions/">Divisions</a>
+                    <a href="/contact/">Contact</a>
+                </div>
+                <p class="footer__copy">&copy; 2026 Birchmont Group Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
