@@ -87,15 +87,20 @@
         sectionReveals.forEach(function (el) { el.classList.add('is-visible'); });
     }
 
-    // --- Contact form (parent-level, UI-only) ---
+    // --- Contact form (posts to Birchmont CRM Apps Script) ---
+    var CONTACT_API_URL = 'https://script.google.com/macros/s/AKfycbwPyMVvoq8P05KQK9WIb30PXXH99Oc2DDt9GTO9UmsxmH8P7hWTuLv8nLzuhdKKdrI/exec';
+    var CONTACT_FALLBACK_EMAIL = 'info@birchmontgroup.ca';
+
     var form = document.getElementById('contactForm');
     var status = document.getElementById('formStatus');
     if (form && status) {
         form.addEventListener('submit', function (e) {
             e.preventDefault();
+            var btn = form.querySelector('button[type="submit"]');
             var name = form.querySelector('[name="name"]').value.trim();
             var email = form.querySelector('[name="email"]').value.trim();
             var message = form.querySelector('[name="message"]').value.trim();
+
             if (!name || !email || !message) {
                 status.textContent = 'Please fill in all fields.';
                 return;
@@ -104,8 +109,43 @@
                 status.textContent = 'Please enter a valid email address.';
                 return;
             }
-            status.textContent = 'Thank you. We’ll be in touch.';
-            form.reset();
+
+            if (btn) btn.disabled = true;
+            status.textContent = 'Sending…';
+
+            // text/plain content type avoids the CORS preflight that Apps Script
+            // web apps don't support. Body is still JSON.
+            fetch(CONTACT_API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                body: JSON.stringify({
+                    action: 'submit_form',
+                    data: {
+                        name: name,
+                        email: email,
+                        message: message,
+                        source_page: location.href
+                    }
+                }),
+                redirect: 'follow'
+            })
+            .then(function (res) { return res.json(); })
+            .then(function (json) {
+                if (!json || !json.ok) {
+                    throw new Error((json && json.error) || 'Submission failed');
+                }
+                status.textContent = 'Thank you. We’ll be in touch.';
+                form.reset();
+            })
+            .catch(function (err) {
+                if (window.console && console.error) {
+                    console.error('Contact form submission failed:', err);
+                }
+                status.textContent = 'Sorry — something went wrong. Please email ' + CONTACT_FALLBACK_EMAIL + ' directly.';
+            })
+            .then(function () {
+                if (btn) btn.disabled = false;
+            });
         });
     }
 })();
