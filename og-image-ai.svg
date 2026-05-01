@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0F1B2D"/>
+  <rect x="80" y="80" width="1040" height="470" fill="none" stroke="#1B2A40" stroke-width="1"/>
+  <text x="600" y="220" font-family="Outfit, Arial, sans-serif" font-size="48" font-weight="800" fill="#F6F3EC" text-anchor="middle" letter-spacing="6">BIRCHMONT</text>
+  <line x1="540" y1="245" x2="660" y2="245" stroke="#C9A44A" stroke-width="1.5"/>
+  <text x="600" y="280" font-family="Outfit, Arial, sans-serif" font-size="20" font-weight="200" fill="#F6F3EC" text-anchor="middle" letter-spacing="10">AI SERVICES</text>
+  <text x="600" y="380" font-family="Outfit, Arial, sans-serif" font-size="44" font-weight="600" fill="#F6F3EC" text-anchor="middle" letter-spacing="-1">Practical AI adoption</text>
+  <text x="600" y="430" font-family="Outfit, Arial, sans-serif" font-size="44" font-weight="600" fill="#C9A44A" text-anchor="middle" letter-spacing="-1">for SMBs. No hype.</text>
+  <text x="600" y="500" font-family="DM Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#6B7A92" text-anchor="middle" letter-spacing="3">READINESS  &#xB7;  AUTOMATION  &#xB7;  CUSTOM TOOLS</text>
+</svg>

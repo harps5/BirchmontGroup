@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#151a26"/>
-  <text x="600" y="280" font-family="Outfit, Arial, sans-serif" font-size="72" font-weight="800" fill="#f4f1ec" text-anchor="middle" letter-spacing="8">BIRCHMONT</text>
-  <line x1="510" y1="310" x2="690" y2="310" stroke="#c5a47e" stroke-width="1.5"/>
-  <text x="600" y="360" font-family="Outfit, Arial, sans-serif" font-size="28" font-weight="200" fill="#f4f1ec" text-anchor="middle" letter-spacing="12">GROUP</text>
-  <text x="600" y="430" font-family="DM Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#8a8f9e" text-anchor="middle" letter-spacing="4">BUILDING. OPERATING. GROWING.</text>
+  <rect width="1200" height="630" fill="#0F1B2D"/>
+  <text x="600" y="280" font-family="Outfit, Arial, sans-serif" font-size="72" font-weight="800" fill="#F6F3EC" text-anchor="middle" letter-spacing="8">BIRCHMONT</text>
+  <line x1="510" y1="310" x2="690" y2="310" stroke="#C9A44A" stroke-width="1.5"/>
+  <text x="600" y="360" font-family="Outfit, Arial, sans-serif" font-size="28" font-weight="200" fill="#F6F3EC" text-anchor="middle" letter-spacing="12">GROUP</text>
+  <text x="600" y="430" font-family="DM Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#6B7A92" text-anchor="middle" letter-spacing="4">THREE SPECIALIST DIVISIONS. ONE OPERATING DISCIPLINE.</text>
 </svg>
