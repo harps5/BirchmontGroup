@@ -5,24 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birchmont Design Services | Web Design for Small Business</title>
     <meta name="description" content="Web design, hosting, and ongoing site management for small and medium businesses. Engagements start as low as $1,000 upfront. Book a free discovery call.">
+    <meta name="author" content="Birchmont Group Inc.">
     <link rel="canonical" href="https://birchmontgroup.ca/divisions/design/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://birchmontgroup.ca/divisions/design/">
     <meta property="og:title" content="Birchmont Design Services | Web Design for Small Business">
     <meta property="og:description" content="Websites built quietly. Operated patiently. Engagements start as low as $1,000 upfront with low monthly fees.">
     <meta property="og:site_name" content="Birchmont Group Inc.">
-    <meta property="og:image" content="https://birchmontgroup.ca/og-image.png">
+    <meta property="og:image" content="https://birchmontgroup.ca/og-image-design.svg">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://birchmontgroup.ca/og-image-design.svg">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Web Design and Hosting",
+        "name": "Birchmont Design Services",
+        "url": "https://birchmontgroup.ca/divisions/design/",
+        "provider": {
+            "@type": "Organization",
+            "name": "Birchmont Group Inc.",
+            "url": "https://birchmontgroup.ca"
+        },
+        "areaServed": { "@type": "Country", "name": "Canada" },
+        "audience": { "@type": "BusinessAudience", "audienceType": "Small and medium businesses" },
+        "description": "Custom web design, hosting, and ongoing site management for small and medium businesses. Fixed-price proposals, no contracts, hosting and edits included.",
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "CAD",
+            "price": "1000",
+            "priceSpecification": {
+                "@type": "PriceSpecification",
+                "minPrice": 1000,
+                "priceCurrency": "CAD",
+                "description": "Engagements start as low as $1,000 upfront with low monthly hosting and maintenance fees."
+            }
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://birchmontgroup.ca/" },
+            { "@type": "ListItem", "position": 2, "name": "Divisions", "item": "https://birchmontgroup.ca/divisions/" },
+            { "@type": "ListItem", "position": 3, "name": "Design Services", "item": "https://birchmontgroup.ca/divisions/design/" }
+        ]
+    }
+    </script>
 </head>
 <body>
+
+    <a href="#main" class="skip-link">Skip to content</a>
 
     <header class="nav" id="nav">
         <div class="nav__inner">
@@ -42,6 +88,7 @@
                         <a href="/divisions/">All Divisions</a>
                         <a href="/divisions/design/">Design Services</a>
                         <a href="/divisions/consulting/">Consulting Services</a>
+                        <a href="/divisions/ai/">AI Services</a>
                     </div>
                 </div>
                 <a href="/contact/">Contact</a>
@@ -52,18 +99,26 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
 
         <!-- HERO -->
         <section class="design-hero section--dark">
             <div class="hero__grain" aria-hidden="true"></div>
             <div class="hero__ambient" aria-hidden="true"></div>
             <div class="container container--narrow" style="position:relative;z-index:1;">
+                <ol class="crumbs reveal" aria-label="Breadcrumb">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/divisions/">Divisions</a></li>
+                    <li aria-current="page">Design Services</li>
+                </ol>
                 <span class="label label--gold reveal">Birchmont Design Services</span>
                 <h1 class="heading heading--light heading--page reveal">Websites built quietly.<br>Operated patiently.</h1>
-                <p class="design-hero__sub reveal">Web design and hosting for small and medium businesses who deserve a better site than they have.</p>
+                <p class="design-hero__sub reveal">Modern, fast, conversion-focused websites for small and medium businesses &mdash; with hosting, maintenance, and ongoing edits handled. Fixed price, no contracts.</p>
                 <p class="design-hero__pricing reveal" data-delay="80">Engagements start as low as $1,000 upfront with low monthly fees. Every proposal tailored to your business.</p>
-                <a href="#lead-form" class="btn reveal" data-delay="160">Book a Free Discovery Call</a>
+                <div class="btn-row btn-row--start">
+                    <a href="#lead-form" class="btn reveal" data-delay="160">Book a Free Discovery Call</a>
+                    <a href="https://cal.com/birchmont/discovery" class="btn btn--ghost reveal" data-delay="200" target="_blank" rel="noopener">Or Self-Schedule &rarr;</a>
+                </div>
             </div>
         </section>
 
@@ -123,31 +178,31 @@
 
                 <div class="process">
                     <div class="process__item reveal" data-delay="0">
-                        <div class="philosophy__number">01</div>
+                        <div class="process__number">01</div>
                         <div class="process__content">
-                            <h3 class="philosophy__title">Discovery</h3>
-                            <p class="philosophy__desc" style="color:var(--body);">Fill out the form below. We&rsquo;ll review your current site and book a 30-minute call within one business day.</p>
+                            <h3 class="process__title">Discovery</h3>
+                            <p class="process__desc">Fill out the form below. We&rsquo;ll review your current site and book a 30-minute call within one business day.</p>
                         </div>
                     </div>
                     <div class="process__item reveal" data-delay="80">
-                        <div class="philosophy__number" style="color:var(--gold);">02</div>
+                        <div class="process__number">02</div>
                         <div class="process__content">
-                            <h3 class="philosophy__title" style="color:var(--navy);">Tailored Proposal</h3>
-                            <p class="philosophy__desc" style="color:var(--body);">You get a fixed price, scoped to your business. No surprises, no hourly estimates that balloon.</p>
+                            <h3 class="process__title">Tailored Proposal</h3>
+                            <p class="process__desc">You get a fixed price, scoped to your business. No surprises, no hourly estimates that balloon.</p>
                         </div>
                     </div>
                     <div class="process__item reveal" data-delay="160">
-                        <div class="philosophy__number" style="color:var(--gold);">03</div>
+                        <div class="process__number">03</div>
                         <div class="process__content">
-                            <h3 class="philosophy__title" style="color:var(--navy);">Design &amp; Build</h3>
-                            <p class="philosophy__desc" style="color:var(--body);">Three to four weeks from approval to launch. You&rsquo;ll see progress along the way and approve before anything goes live.</p>
+                            <h3 class="process__title">Design &amp; Build</h3>
+                            <p class="process__desc">Three to four weeks from approval to launch. You&rsquo;ll see progress along the way and approve before anything goes live.</p>
                         </div>
                     </div>
                     <div class="process__item reveal" data-delay="240">
-                        <div class="philosophy__number" style="color:var(--gold);">04</div>
+                        <div class="process__number">04</div>
                         <div class="process__content">
-                            <h3 class="philosophy__title" style="color:var(--navy);">Operate</h3>
-                            <p class="philosophy__desc" style="color:var(--body);">Hosting, updates, monthly edits, ongoing. We don&rsquo;t build and disappear. Your site stays fast, current, and maintained.</p>
+                            <h3 class="process__title">Operate</h3>
+                            <p class="process__desc">Hosting, updates, monthly edits, ongoing. We don&rsquo;t build and disappear. Your site stays fast, current, and maintained.</p>
                         </div>
                     </div>
                 </div>
@@ -187,7 +242,10 @@
                 <span class="label reveal">Pricing</span>
                 <h2 class="heading reveal">Built right. Priced fairly.</h2>
                 <p class="about__text reveal" style="margin:24px auto 40px;max-width:54ch;text-align:center;">Engagements start as low as $1,000 upfront with low monthly fees. Every project is scoped and quoted to fit your business &mdash; no templates, no tiers forced on you. We&rsquo;ll walk you through pricing on the discovery call.</p>
-                <a href="#lead-form" class="btn reveal">Book a Free Discovery Call</a>
+                <div class="btn-row reveal">
+                    <a href="#lead-form" class="btn">Book a Free Discovery Call</a>
+                    <a href="https://cal.com/birchmont/discovery" class="text-link text-link--gold" target="_blank" rel="noopener">Or self-schedule &rarr;</a>
+                </div>
             </div>
         </section>
 
@@ -244,7 +302,7 @@
                 <div style="text-align:center;margin-bottom:clamp(40px,6vw,64px);">
                     <span class="label reveal">Get Started</span>
                     <h2 class="heading reveal">Book your free discovery call.</h2>
-                    <p class="about__text reveal" style="margin:24px auto 0;max-width:52ch;text-align:center;">Tell us about your business. We&rsquo;ll review your current site and come back within one business day to book a call.</p>
+                    <p class="about__text reveal" style="margin:24px auto 0;max-width:52ch;text-align:center;">Tell us about your business. We&rsquo;ll review your current site and come back within one business day to book a call &mdash; or self-schedule via <a href="https://cal.com/birchmont/discovery" target="_blank" rel="noopener" style="color:var(--gold);">Cal.com</a>.</p>
                 </div>
 
                 <form class="lead-form" id="designLeadForm" novalidate>
@@ -305,7 +363,8 @@
                     </div>
                 </a>
                 <div class="footer__links">
-                    <a href="/">Home</a>
+                    <a href="/about/">About</a>
+                    <a href="/divisions/">Divisions</a>
                     <a href="/contact/">Contact</a>
                 </div>
                 <p class="footer__copy">&copy; 2026 Birchmont Group Inc. All rights reserved.</p>

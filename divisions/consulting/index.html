@@ -5,24 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birchmont Consulting Services | Government, QSR &amp; Bid Writing</title>
     <meta name="description" content="Specialist consulting in government contracting, bid proposal writing, and quick service restaurant operations. Operator-led expertise for businesses ready to grow.">
+    <meta name="author" content="Birchmont Group Inc.">
     <link rel="canonical" href="https://birchmontgroup.ca/divisions/consulting/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://birchmontgroup.ca/divisions/consulting/">
     <meta property="og:title" content="Birchmont Consulting Services | Government, QSR &amp; Bid Writing">
-    <meta property="og:description" content="Specialist consulting in government contracting, bid proposal writing, and quick service restaurant operations.">
+    <meta property="og:description" content="Specialist consulting in government contracting, bid proposal writing, and QSR operations.">
     <meta property="og:site_name" content="Birchmont Group Inc.">
-    <meta property="og:image" content="https://birchmontgroup.ca/og-image.png">
+    <meta property="og:image" content="https://birchmontgroup.ca/og-image-consulting.svg">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://birchmontgroup.ca/og-image-consulting.svg">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Specialist Consulting",
+        "name": "Birchmont Consulting Services",
+        "url": "https://birchmontgroup.ca/divisions/consulting/",
+        "provider": {
+            "@type": "Organization",
+            "name": "Birchmont Group Inc.",
+            "url": "https://birchmontgroup.ca"
+        },
+        "areaServed": { "@type": "Country", "name": "Canada" },
+        "audience": { "@type": "BusinessAudience", "audienceType": "Small and medium businesses" },
+        "description": "Operator-led consulting in government contracting, bid and proposal writing, and quick service restaurant operations.",
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "CAD"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://birchmontgroup.ca/" },
+            { "@type": "ListItem", "position": 2, "name": "Divisions", "item": "https://birchmontgroup.ca/divisions/" },
+            { "@type": "ListItem", "position": 3, "name": "Consulting Services", "item": "https://birchmontgroup.ca/divisions/consulting/" }
+        ]
+    }
+    </script>
 </head>
 <body>
+
+    <a href="#main" class="skip-link">Skip to content</a>
 
     <header class="nav" id="nav">
         <div class="nav__inner">
@@ -42,6 +81,7 @@
                         <a href="/divisions/">All Divisions</a>
                         <a href="/divisions/design/">Design Services</a>
                         <a href="/divisions/consulting/">Consulting Services</a>
+                        <a href="/divisions/ai/">AI Services</a>
                     </div>
                 </div>
                 <a href="/contact/">Contact</a>
@@ -52,17 +92,25 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
 
         <!-- HERO -->
         <section class="design-hero section--dark">
             <div class="hero__grain" aria-hidden="true"></div>
             <div class="hero__ambient" aria-hidden="true"></div>
             <div class="container container--narrow" style="position:relative;z-index:1;">
+                <ol class="crumbs reveal" aria-label="Breadcrumb">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/divisions/">Divisions</a></li>
+                    <li aria-current="page">Consulting Services</li>
+                </ol>
                 <span class="label label--gold reveal">Birchmont Consulting Services</span>
                 <h1 class="heading heading--light heading--page reveal">Operator-led consulting.<br>No theory. Just results.</h1>
                 <p class="design-hero__sub reveal">Specialist advisors in government contracting, bid proposal writing, and QSR operations &mdash; backed by people who&rsquo;ve done the work themselves.</p>
-                <a href="#contact-consulting" class="btn reveal" data-delay="120">Book a Consultation</a>
+                <div class="btn-row btn-row--start">
+                    <a href="#lead-form" class="btn reveal" data-delay="120">Book a Consultation</a>
+                    <a href="#specialties" class="btn btn--ghost reveal" data-delay="160">See Our Specialties</a>
+                </div>
             </div>
         </section>
 
@@ -83,7 +131,7 @@
         </section>
 
         <!-- SPECIALTIES -->
-        <section class="section section--dark">
+        <section class="section section--dark" id="specialties">
             <div class="container">
                 <div class="philosophy__head">
                     <span class="label label--gold reveal">Our Specialties</span>
@@ -126,24 +174,24 @@
 
                 <div class="process">
                     <div class="process__item reveal" data-delay="0">
-                        <div class="philosophy__number" style="color:var(--gold);">01</div>
+                        <div class="process__number">01</div>
                         <div class="process__content">
-                            <h3 class="philosophy__title" style="color:var(--navy);">Initial Conversation</h3>
-                            <p class="philosophy__desc" style="color:var(--body);">Tell us what you&rsquo;re working on. We&rsquo;ll have a candid conversation about whether we&rsquo;re the right fit &mdash; and if we&rsquo;re not, we&rsquo;ll tell you.</p>
+                            <h3 class="process__title">Initial Conversation</h3>
+                            <p class="process__desc">Tell us what you&rsquo;re working on. We&rsquo;ll have a candid conversation about whether we&rsquo;re the right fit &mdash; and if we&rsquo;re not, we&rsquo;ll tell you.</p>
                         </div>
                     </div>
                     <div class="process__item reveal" data-delay="80">
-                        <div class="philosophy__number" style="color:var(--gold);">02</div>
+                        <div class="process__number">02</div>
                         <div class="process__content">
-                            <h3 class="philosophy__title" style="color:var(--navy);">Scoped Engagement</h3>
-                            <p class="philosophy__desc" style="color:var(--body);">We define a clear scope, timeline, and deliverable. No open-ended retainers unless that&rsquo;s what makes sense for you.</p>
+                            <h3 class="process__title">Scoped Engagement</h3>
+                            <p class="process__desc">We define a clear scope, timeline, and deliverable. No open-ended retainers unless that&rsquo;s what makes sense for you.</p>
                         </div>
                     </div>
                     <div class="process__item reveal" data-delay="160">
-                        <div class="philosophy__number" style="color:var(--gold);">03</div>
+                        <div class="process__number">03</div>
                         <div class="process__content">
-                            <h3 class="philosophy__title" style="color:var(--navy);">Deliver &amp; Support</h3>
-                            <p class="philosophy__desc" style="color:var(--body);">We do the work, hand off clear deliverables, and stay available for questions. Our goal is to leave you more capable, not more dependent.</p>
+                            <h3 class="process__title">Deliver &amp; Support</h3>
+                            <p class="process__desc">We do the work, hand off clear deliverables, and stay available for questions. Our goal is to leave you more capable, not more dependent.</p>
                         </div>
                     </div>
                 </div>
@@ -167,7 +215,7 @@
                     </div>
                     <div class="trust-point reveal" data-delay="120">
                         <div class="trust-point__icon">&check;</div>
-                        <p>Backed by Birchmont Group &mdash; a holding company that operates businesses, not just advises them</p>
+                        <p>Backed by Birchmont Group &mdash; an operating company, not a pure advisory shop</p>
                     </div>
                     <div class="trust-point reveal" data-delay="180">
                         <div class="trust-point__icon">&check;</div>
@@ -177,14 +225,97 @@
             </div>
         </section>
 
-        <!-- CTA / CONTACT -->
-        <section class="section" id="contact-consulting">
-            <div class="container container--narrow" style="text-align:center;">
-                <span class="label reveal">Get Started</span>
-                <h2 class="heading reveal">Let&rsquo;s talk about what you need.</h2>
-                <p class="about__text reveal" style="margin:24px auto 40px;max-width:52ch;text-align:center;">Whether it&rsquo;s a specific bid, an operational challenge, or a government contracting question &mdash; reach out and we&rsquo;ll set up a conversation.</p>
-                <a href="mailto:info@birchmontgroup.ca" class="contact__email reveal" style="margin:0 auto 16px;font-size:clamp(20px,2.5vw,28px);">info@birchmontgroup.ca</a>
-                <p class="about__text reveal" style="text-align:center;color:var(--muted);font-size:13px;margin:0 auto;">Calgary, Alberta, Canada</p>
+        <!-- FAQ -->
+        <section class="section section--dark" style="padding-top:0;">
+            <div class="container container--narrow">
+                <span class="label label--gold reveal">FAQ</span>
+                <h2 class="heading heading--light reveal">Common questions.</h2>
+
+                <div class="faq">
+                    <details class="faq__item reveal" data-delay="0">
+                        <summary class="faq__question">How much does an engagement cost?</summary>
+                        <div class="faq__answer">
+                            <p>It depends on scope. A targeted bid review may be a few thousand dollars; a multi-month government contracting strategy is more. We always quote a fixed fee or a clearly capped hourly band &mdash; never an open-ended retainer unless that&rsquo;s what you want.</p>
+                        </div>
+                    </details>
+                    <details class="faq__item reveal" data-delay="60">
+                        <summary class="faq__question">How long does a typical engagement take?</summary>
+                        <div class="faq__answer">
+                            <p>Bid and proposal work is usually two to six weeks. Government contracting strategy and QSR operational engagements typically run one to three months. We&rsquo;ll scope and date this clearly upfront.</p>
+                        </div>
+                    </details>
+                    <details class="faq__item reveal" data-delay="120">
+                        <summary class="faq__question">Do you work outside Alberta or Canada?</summary>
+                        <div class="faq__answer">
+                            <p>Yes. Most engagements run remotely with periodic in-person work where it adds value. We work across Canada and selectively with US-based clients depending on the domain.</p>
+                        </div>
+                    </details>
+                    <details class="faq__item reveal" data-delay="180">
+                        <summary class="faq__question">Can you guarantee we&rsquo;ll win the bid?</summary>
+                        <div class="faq__answer">
+                            <p>No, and any consultant who does is selling you something. We&rsquo;ll give you the strongest possible submission, sharp positioning, and honest feedback on probability of success &mdash; and we&rsquo;ll tell you when a bid isn&rsquo;t worth pursuing.</p>
+                        </div>
+                    </details>
+                    <details class="faq__item reveal" data-delay="240">
+                        <summary class="faq__question">What industries do you serve outside QSR and government?</summary>
+                        <div class="faq__answer">
+                            <p>Bid and proposal writing transfers across most B2B and B2G sectors &mdash; we&rsquo;ve worked across professional services, construction, technology, and trades. For deep operational consulting we focus on QSR specifically because that&rsquo;s where our team has direct multi-location operating experience.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEAD FORM -->
+        <section class="section" id="lead-form">
+            <div class="container container--narrow">
+                <div style="text-align:center;margin-bottom:clamp(40px,6vw,64px);">
+                    <span class="label reveal">Get Started</span>
+                    <h2 class="heading reveal">Book a consultation.</h2>
+                    <p class="about__text reveal" style="margin:24px auto 0;max-width:52ch;text-align:center;">Tell us about what you&rsquo;re working on. We&rsquo;ll come back within one business day to set up a 30-minute call &mdash; no commitment, no pitch deck.</p>
+                </div>
+
+                <form class="lead-form" id="consultingLeadForm" novalidate>
+                    <div class="field">
+                        <label for="con-lead-name">Name *</label>
+                        <input type="text" id="con-lead-name" name="name" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="con-lead-email">Email *</label>
+                        <input type="email" id="con-lead-email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="field">
+                        <label for="con-lead-company">Company</label>
+                        <input type="text" id="con-lead-company" name="company" autocomplete="organization">
+                    </div>
+                    <div class="field">
+                        <label for="con-lead-phone">Phone</label>
+                        <input type="tel" id="con-lead-phone" name="phone" autocomplete="tel">
+                    </div>
+                    <div class="field field--full">
+                        <label for="con-lead-website">Company Website</label>
+                        <input type="url" id="con-lead-website" name="website" placeholder="https://">
+                    </div>
+
+                    <fieldset class="field field--full interest-tags">
+                        <legend>What can we help with?</legend>
+                        <div class="interest-tags__options">
+                            <label class="tag-option"><input type="checkbox" name="interest" value="Government Contracting"><span>Government Contracting</span></label>
+                            <label class="tag-option"><input type="checkbox" name="interest" value="Bid &amp; Proposal Writing"><span>Bid &amp; Proposal Writing</span></label>
+                            <label class="tag-option"><input type="checkbox" name="interest" value="QSR Operations"><span>QSR Operations</span></label>
+                            <label class="tag-option"><input type="checkbox" name="interest" value="Just exploring"><span>Just exploring</span></label>
+                        </div>
+                    </fieldset>
+
+                    <div class="field field--full">
+                        <label for="con-lead-message">Tell us about your project</label>
+                        <textarea id="con-lead-message" name="message" rows="4"></textarea>
+                    </div>
+                    <div class="field field--full">
+                        <button type="submit" class="btn" id="consultingLeadSubmitBtn">Book a Consultation</button>
+                    </div>
+                    <p class="form-status" id="consultingLeadFormStatus" aria-live="polite"></p>
+                </form>
             </div>
         </section>
 
@@ -201,7 +332,7 @@
                     </div>
                 </a>
                 <div class="footer__links">
-                    <a href="/">Home</a>
+                    <a href="/about/">About</a>
                     <a href="/divisions/">Divisions</a>
                     <a href="/contact/">Contact</a>
                 </div>
@@ -211,5 +342,6 @@
     </footer>
 
     <script src="/script.js"></script>
+    <script src="/divisions/consulting/script.js"></script>
 </body>
 </html>
