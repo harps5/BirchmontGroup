@@ -1,0 +1,14 @@
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "redirects": [
+        { "source": "/divisions/design", "destination": "/studio/", "statusCode": 301 },
+        { "source": "/divisions/design/", "destination": "/studio/", "statusCode": 301 },
+        { "source": "/divisions/design/:path*", "destination": "/studio/", "statusCode": 301 },
+        { "source": "/divisions/consulting", "destination": "/advisory/", "statusCode": 301 },
+        { "source": "/divisions/consulting/", "destination": "/advisory/", "statusCode": 301 },
+        { "source": "/divisions/consulting/:path*", "destination": "/advisory/", "statusCode": 301 },
+        { "source": "/divisions/ai", "destination": "/systems/", "statusCode": 301 },
+        { "source": "/divisions/ai/", "destination": "/systems/", "statusCode": 301 },
+        { "source": "/divisions/ai/:path*", "destination": "/systems/", "statusCode": 301 }
+    ]
+}
