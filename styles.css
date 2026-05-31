@@ -1767,6 +1767,8 @@ textarea:focus-visible {
     }
     .nav__dropdown-menu.is-open {
         display: block;
+        transform: none;
+        left: auto;
     }
     .nav__dropdown-menu a {
         padding: 8px 0;
