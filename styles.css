@@ -1646,15 +1646,175 @@ textarea:focus-visible {
 }
 
 /* ==========================================================================
-   HUBSPOT EMBED CONTAINER
+   LEAD FORM  (custom-built, submits to HubSpot)
    ========================================================================== */
 .hubspot-embed {
-    max-width: 680px;
+    max-width: 620px;
     margin: 0 auto;
     min-height: 120px;
 }
-.hubspot-embed .hs-form-frame { width: 100%; }
-.hubspot-embed iframe { max-width: 100% !important; }
+
+.lead-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: clamp(32px, 4.5vw, 52px);
+    background: linear-gradient(180deg, rgba(246, 243, 236, 0.05), rgba(246, 243, 236, 0.015));
+    border: 1px solid rgba(246, 243, 236, 0.12);
+    border-radius: 4px;
+    box-shadow: 0 30px 70px -40px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+/* gold hairline accent across the top of the card */
+.lead-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.75;
+}
+.lead-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+.lead-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.lead-form__field label {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(246, 243, 236, 0.65);
+}
+.lead-form__req { color: var(--gold); }
+.lead-form__opt {
+    text-transform: none;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    color: rgba(246, 243, 236, 0.3);
+}
+.lead-form input,
+.lead-form textarea {
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cream);
+    background: rgba(10, 19, 34, 0.6);
+    border: 1px solid rgba(246, 243, 236, 0.16);
+    border-radius: 3px;
+    padding: 15px 17px;
+    transition: border-color 0.4s var(--ease), background 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.lead-form input::placeholder,
+.lead-form textarea::placeholder { color: rgba(246, 243, 236, 0.3); }
+.lead-form input:hover,
+.lead-form textarea:hover { border-color: rgba(246, 243, 236, 0.34); }
+.lead-form input:focus,
+.lead-form textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: rgba(10, 19, 34, 0.85);
+    box-shadow: 0 0 0 3px rgba(201, 164, 74, 0.14);
+}
+.lead-form textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+.lead-form__field--error input,
+.lead-form__field--error textarea {
+    border-color: #C9695A;
+}
+.lead-form__error {
+    font-size: 12.5px;
+    color: #E59A8B;
+}
+
+/* honeypot — visually hidden, kept in the layout flow for screen readers off-screen */
+.lead-form__hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.lead-form__submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 18px 32px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+.lead-form__submit::after {
+    content: "\2192";
+    font-size: 15px;
+    transition: transform 0.4s var(--ease);
+}
+.lead-form__submit:hover::after { transform: translateX(5px); }
+.lead-form__submit:disabled,
+.lead-form.is-submitting .lead-form__submit {
+    opacity: 0.55;
+    cursor: default;
+}
+.lead-form__submit:disabled::after,
+.lead-form.is-submitting .lead-form__submit::after { display: none; }
+.lead-form__fineprint {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(246, 243, 236, 0.35);
+}
+
+.form-status--error { color: #E59A8B; }
+
+/* success state — replaces the form after submit */
+.lead-form__success {
+    text-align: center;
+    padding: clamp(36px, 5vw, 60px) clamp(24px, 4vw, 40px);
+    background: rgba(246, 243, 236, 0.03);
+    border: 1px solid rgba(201, 164, 74, 0.28);
+    border-radius: 3px;
+}
+.lead-form__success-icon {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    display: grid;
+    place-items: center;
+}
+.lead-form__success h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(20px, 2.6vw, 26px);
+    color: var(--cream);
+    margin-bottom: 12px;
+}
+.lead-form__success p {
+    max-width: 42ch;
+    margin: 0 auto;
+    color: rgba(246, 243, 236, 0.6);
+}
+.lead-form__success a { color: var(--gold); }
+
+@media (max-width: 560px) {
+    .lead-form__row { grid-template-columns: 1fr; }
+}
+
 .hubspot-fallback {
     text-align: center;
     font-size: 14px;
