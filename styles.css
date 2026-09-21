@@ -796,6 +796,16 @@ blockquote { margin: 0; padding: 0; border: none; }
     color: var(--navy);
     border-color: var(--cream);
 }
+/* Ghost buttons sitting on the cream background need the inverse treatment. */
+.section:not(.section--dark) .btn--ghost {
+    color: var(--navy);
+    border-color: rgba(15, 27, 45, 0.25);
+}
+.section:not(.section--dark) .btn--ghost:hover {
+    background: var(--navy);
+    color: var(--cream);
+    border-color: var(--navy);
+}
 .btn-row {
     display: flex;
     gap: 16px;
@@ -1957,6 +1967,7 @@ textarea:focus-visible {
     .studio-hero { padding: 150px 0 72px; }
 
     .footer__inner { flex-direction: column; text-align: center; gap: 20px; }
+    .footer__links { flex-wrap: wrap; justify-content: center; gap: 16px 24px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
