@@ -79,6 +79,7 @@
                         <a href="/real-estate/">Real Estate</a>
                     </div>
                 </div>
+                <a href="/investors/">Investors</a>
                 <a href="/contact/">Contact</a>
             </nav>
             <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
@@ -257,6 +258,145 @@
             </div>
         </section>
 
+
+        <!-- THE ECONOMICS -->
+        <section class="section section--dark" id="economics">
+            <div class="container">
+                <div class="section-head">
+                    <span class="label label--gold reveal">The Economics</span>
+                    <h2 class="heading heading--light reveal">Why we buy the building.</h2>
+                    <p class="center-head__sub reveal" data-delay="80" style="margin-left:0;text-align:left;">Occupancy is a small share of a restaurant&rsquo;s cost base and the only major line an operator cannot control. That asymmetry is the whole argument for owning the site.</p>
+                </div>
+
+                <figure class="viz reveal">
+                    <figcaption class="viz__head">
+                        <span class="viz__tag">Illustrative</span>
+                        <h3 class="viz__title">Where a revenue dollar goes</h3>
+                        <p class="viz__sub">Typical quick-service restaurant cost structure as a share of sales. Food and labour dominate the P&amp;L, but both are managed daily. Occupancy is set by a lease signed years earlier.</p>
+                    </figcaption>
+
+                    <div class="viz__legend" aria-hidden="true">
+                        <span class="viz__legend-item"><span class="viz__swatch" style="--c:var(--viz-food)"></span>Food &amp; paper</span>
+                        <span class="viz__legend-item"><span class="viz__swatch" style="--c:var(--viz-labour)"></span>Labour</span>
+                        <span class="viz__legend-item viz__legend-item--key"><span class="viz__swatch" style="--c:var(--viz-occupancy)"></span>Occupancy</span>
+                        <span class="viz__legend-item"><span class="viz__swatch" style="--c:var(--viz-other)"></span>Other operating</span>
+                        <span class="viz__legend-item"><span class="viz__swatch" style="--c:var(--viz-margin)"></span>Operating margin</span>
+                    </div>
+
+                    <div class="viz__rows">
+                        <div class="viz__row">
+                            <span class="viz__rowlabel">Share of sales</span>
+                            <div class="viz__bar" role="img" aria-label="Cost structure as a share of sales: food and paper 30 percent, labour 31 percent, occupancy 9 percent, other operating costs 18 percent, operating margin 12 percent.">
+                                <span class="viz__seg" style="--c:var(--viz-food);--w:30%;--d:0ms" data-label="Food &amp; paper" data-value="30%" tabindex="0"></span>
+                                <span class="viz__seg" style="--c:var(--viz-labour);--w:31%;--d:90ms" data-label="Labour" data-value="31%" tabindex="0"></span>
+                                <span class="viz__seg" style="--c:var(--viz-occupancy);--w:9%;--d:180ms" data-label="Occupancy" data-value="9%" tabindex="0"></span>
+                                <span class="viz__seg" style="--c:var(--viz-other);--w:18%;--d:270ms" data-label="Other operating" data-value="18%" tabindex="0"></span>
+                                <span class="viz__seg" style="--c:var(--viz-margin);--w:12%;--d:360ms" data-label="Operating margin" data-value="12%" tabindex="0"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="viz__callouts">
+                        <div class="viz__callout">
+                            <span class="viz__callout-value" style="--c:var(--viz-occupancy)">9%</span>
+                            <span class="viz__callout-label">Occupancy &mdash; fixed by lease</span>
+                        </div>
+                        <div class="viz__callout">
+                            <span class="viz__callout-value" style="--c:var(--viz-margin)">12%</span>
+                            <span class="viz__callout-label">Operating margin</span>
+                        </div>
+                        <div class="viz__callout">
+                            <span class="viz__callout-value" style="--c:var(--cream)">3 of 4</span>
+                            <span class="viz__callout-label">Cost lines an operator controls</span>
+                        </div>
+                    </div>
+
+                    <details class="viz__table">
+                        <summary>View as table</summary>
+                        <table>
+                            <thead><tr><th scope="col">Line</th><th scope="col">Share of sales</th></tr></thead>
+                            <tbody>
+                                <tr><td>Food &amp; paper</td><td>30%</td></tr>
+                                <tr><td>Labour</td><td>31%</td></tr>
+                                <tr><td>Occupancy</td><td>9%</td></tr>
+                                <tr><td>Other operating</td><td>18%</td></tr>
+                                <tr><td>Operating margin</td><td>12%</td></tr>
+                            </tbody>
+                        </table>
+                    </details>
+                    <p class="viz__note">Illustrative industry-typical structure for a quick-service restaurant, shown to explain the model. Not Birchmont Group operating results.</p>
+                </figure>
+
+                <figure class="viz reveal" data-delay="100">
+                    <figcaption class="viz__head">
+                        <span class="viz__tag">Illustrative</span>
+                        <h3 class="viz__title">Occupancy cost over a twenty-year hold</h3>
+                        <p class="viz__sub">Annual occupancy cost, indexed to 100 in year one. A lease escalates for as long as you hold it. Fixed-rate debt service on an owned site does not &mdash; and the asset is yours at the end of it.</p>
+                    </figcaption>
+
+                    <div class="viz__legend">
+                        <span class="viz__legend-item"><span class="viz__swatch" style="--c:var(--viz-other)"></span>Leased site</span>
+                        <span class="viz__legend-item viz__legend-item--key"><span class="viz__swatch" style="--c:var(--viz-occupancy)"></span>Owned site</span>
+                    </div>
+
+                    <svg class="viz__plot" viewBox="0 0 800 292" role="img" aria-label="Line chart of annual occupancy cost indexed to 100 in year one. The leased site rises from 100 to 175 by year twenty. The owned site stays flat at 105 throughout, crossing below the leased line in year three.">
+                        <line class="viz__grid" x1="64" y1="24" x2="772" y2="24"/>
+                        <line class="viz__grid" x1="64" y1="80" x2="772" y2="80"/>
+                        <line class="viz__grid" x1="64" y1="136" x2="772" y2="136"/>
+                        <line class="viz__grid" x1="64" y1="192" x2="772" y2="192"/>
+                        <line class="viz__grid" x1="64" y1="248" x2="772" y2="248"/>
+                        <text class="viz__axis-text" x="56" y="28" text-anchor="end">200</text>
+                        <text class="viz__axis-text" x="56" y="84" text-anchor="end">150</text>
+                        <text class="viz__axis-text" x="56" y="140" text-anchor="end">100</text>
+                        <text class="viz__axis-text" x="56" y="196" text-anchor="end">50</text>
+
+                        <path class="viz__line" style="stroke:var(--viz-other);--len:713;--d:200ms" d="M64.0 136.0 L101.3 132.6 L138.5 129.2 L175.8 125.6 L213.1 121.9 L250.3 118.2 L287.6 114.3 L324.8 110.3 L362.1 106.1 L399.4 101.9 L436.6 97.5 L473.9 93.0 L511.2 88.3 L548.4 83.5 L585.7 78.6 L622.9 73.5 L660.2 68.3 L697.5 62.9 L734.7 57.3 L772.0 51.6"/>
+                        <path class="viz__line" style="stroke:var(--viz-occupancy);--len:708;--d:500ms" d="M64.0 130.4 L772.0 130.4"/>
+
+                        <circle class="viz__dot" cx="772" cy="51.6" fill="var(--viz-other)"/>
+                        <circle class="viz__dot" cx="772" cy="130.4" fill="var(--viz-occupancy)"/>
+                        <text class="viz__pointlabel" x="760" y="42" text-anchor="end" fill="#8A94A6">Leased · 175</text>
+                        <text class="viz__pointlabel" x="760" y="150" text-anchor="end" fill="#C9A44A">Owned · 105</text>
+
+                        <text class="viz__axis-text" x="64" y="272">Year 1</text>
+                        <text class="viz__axis-text" x="399" y="272" text-anchor="middle">Year 10</text>
+                        <text class="viz__axis-text" x="772" y="272" text-anchor="end">Year 20</text>
+                    </svg>
+
+                    <div class="viz__callouts">
+                        <div class="viz__callout">
+                            <span class="viz__callout-value" style="--c:var(--viz-occupancy)">~22%</span>
+                            <span class="viz__callout-label">Lower cumulative occupancy cost</span>
+                        </div>
+                        <div class="viz__callout">
+                            <span class="viz__callout-value" style="--c:var(--cream)">Year 3</span>
+                            <span class="viz__callout-label">Where owning starts costing less</span>
+                        </div>
+                        <div class="viz__callout">
+                            <span class="viz__callout-value" style="--c:var(--cream)">Asset</span>
+                            <span class="viz__callout-label">Owned outright at the end</span>
+                        </div>
+                    </div>
+
+                    <details class="viz__table">
+                        <summary>View as table</summary>
+                        <table>
+                            <thead><tr><th scope="col">Year</th><th scope="col">Leased</th><th scope="col">Owned</th></tr></thead>
+                            <tbody>
+                                <tr><td>1</td><td>100</td><td>105</td></tr>
+                                <tr><td>5</td><td>113</td><td>105</td></tr>
+                                <tr><td>10</td><td>130</td><td>105</td></tr>
+                                <tr><td>15</td><td>151</td><td>105</td></tr>
+                                <tr><td>20</td><td>175</td><td>105</td></tr>
+                                <tr><td>Cumulative</td><td>2,687</td><td>2,100</td></tr>
+                            </tbody>
+                        </table>
+                    </details>
+                    <p class="viz__note">Assumes 3% annual rent escalation on the leased site and fixed-rate debt service on the owned site at a 5% higher year-one cost. Illustrative model shown to explain the strategy. Not a forecast, and not Birchmont Group operating results.</p>
+                </figure>
+            </div>
+        </section>
+
         <!-- WHAT WE LOOK FOR -->
         <section class="section section--dark" id="criteria">
             <div class="container">
@@ -317,7 +457,7 @@
                 <p class="about__text reveal" style="margin:24px auto 40px;max-width:52ch;text-align:center;color:rgba(246,243,236,0.6);">Franchisors evaluating operators, brokers with a listing, and owners thinking about succession &mdash; we sign NDAs quickly and give a straight answer fast. We reply within one business day.</p>
                 <div class="btn-row reveal">
                     <a href="/contact/" class="btn">Contact Us</a>
-                    <a href="/platforms/" class="btn btn--ghost">Our Platforms &rarr;</a>
+                    <a href="/investors/" class="btn btn--ghost">Capital Partners &rarr;</a>
                 </div>
             </div>
         </section>
@@ -339,6 +479,7 @@
                     <a href="/platforms/">Platforms</a>
                     <a href="/restaurants/">Restaurant Operations</a>
                     <a href="/real-estate/">Real Estate</a>
+                    <a href="/investors/">Investors</a>
                     <a href="/contact/">Contact</a>
                 </div>
                 <p class="footer__copy">&copy; 2026 Birchmont Group Inc. All rights reserved.</p>
