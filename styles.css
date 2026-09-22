@@ -527,9 +527,10 @@ blockquote { margin: 0; padding: 0; border: none; }
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--muted);
+    color: #5A6880;
     margin-top: 10px;
 }
+.section--dark .stat__label { color: rgba(246, 243, 236, 0.6); }
 
 /* ==========================================================================
    PHILOSOPHY
@@ -739,7 +740,7 @@ blockquote { margin: 0; padding: 0; border: none; }
 .footer__links a:hover { color: var(--gold); }
 .footer__copy {
     font-size: 11px;
-    color: rgba(246, 243, 236, 0.25);
+    color: rgba(246, 243, 236, 0.55);
     font-family: var(--font-display);
     letter-spacing: 0.06em;
 }
@@ -2127,7 +2128,7 @@ textarea:focus-visible {
     font-size: 10px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(246, 243, 236, 0.45);
+    color: rgba(246, 243, 236, 0.6);
 }
 
 /* --- Line chart --- */
@@ -2169,7 +2170,7 @@ textarea:focus-visible {
     font-size: 11px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: rgba(246, 243, 236, 0.45);
+    color: rgba(246, 243, 236, 0.6);
     cursor: pointer;
     padding: 8px 0;
     transition: color var(--transition);
@@ -2189,7 +2190,7 @@ textarea:focus-visible {
     font-size: 10px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: rgba(246, 243, 236, 0.4);
+    color: rgba(246, 243, 236, 0.55);
 }
 .viz__table td:not(:first-child),
 .viz__table th:not(:first-child) { text-align: right; padding-right: 0; }
@@ -2197,7 +2198,7 @@ textarea:focus-visible {
     margin-top: 16px;
     font-size: 12px;
     line-height: 1.65;
-    color: rgba(246, 243, 236, 0.35);
+    color: rgba(246, 243, 236, 0.55);
     max-width: 70ch;
 }
 
@@ -2208,4 +2209,112 @@ textarea:focus-visible {
 @media (prefers-reduced-motion: reduce) {
     .viz__seg { width: var(--w); animation: none; }
     .viz__line { stroke-dashoffset: 0; animation: none; }
+}
+
+/* ==========================================================================
+   PHASE TRACK
+   A stated plan, not a forecast — the current phase carries the gold,
+   later phases step back so the reader can see where the company is now.
+   ========================================================================== */
+.phases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(20px, 2.5vw, 32px);
+    margin-top: clamp(40px, 5vw, 56px);
+}
+.phase {
+    position: relative;
+    padding-top: 30px;
+    border-top: 1px solid rgba(246, 243, 236, 0.12);
+}
+.phase::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--navy);
+    border: 1px solid rgba(246, 243, 236, 0.3);
+}
+.phase--now { border-top-color: var(--gold); }
+.phase--now::before { background: var(--gold); border-color: var(--gold); }
+.phase--now .phase__when { color: var(--gold); }
+.phase__when {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(246, 243, 236, 0.58);
+    margin-bottom: 12px;
+}
+.phase__title {
+    font-family: var(--font-display);
+    font-size: clamp(17px, 1.5vw, 21px);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--cream);
+    margin-bottom: 12px;
+}
+.phase--later .phase__title { color: rgba(246, 243, 236, 0.75); }
+.phase__desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(246, 243, 236, 0.5);
+}
+.phase__list {
+    list-style: none;
+    margin: 14px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.phase__list li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(246, 243, 236, 0.5);
+    padding-left: 16px;
+    position: relative;
+}
+.phase__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 7px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.6;
+}
+
+/* --- Enquiry checklist: what to send when reaching out --- */
+.ask {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(20px, 2.5vw, 28px);
+    margin-top: clamp(36px, 4vw, 48px);
+}
+.ask__item {
+    border-left: 2px solid rgba(201, 164, 74, 0.5);
+    padding: 4px 0 4px 20px;
+}
+.ask__title {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--navy);
+    margin-bottom: 6px;
+}
+.section--dark .ask__title { color: var(--cream); }
+.ask__desc { font-size: 14px; line-height: 1.7; color: var(--body); }
+.section--dark .ask__desc { color: rgba(246, 243, 236, 0.55); }
+
+@media (max-width: 860px) {
+    .phases { grid-template-columns: 1fr; gap: 32px; }
+    .ask { grid-template-columns: 1fr; }
 }
