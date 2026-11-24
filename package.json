@@ -5,7 +5,7 @@
   "description": "Birchmont Group Inc. — static marketing site with a single Stripe webhook serverless function.",
   "type": "module",
   "engines": {
-    "node": "20.x"
+    "node": "24.x"
   },
   "dependencies": {
     "stripe": "^17.4.0"
