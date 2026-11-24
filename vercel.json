@@ -1,17 +1,125 @@
 {
-    "$schema": "https://openapi.vercel.sh/vercel.json",
-    "redirects": [
-        { "source": "/divisions", "destination": "/platforms/", "statusCode": 301 },
-        { "source": "/divisions/", "destination": "/platforms/", "statusCode": 301 },
-        { "source": "/divisions/:path*", "destination": "/platforms/", "statusCode": 301 },
-        { "source": "/studio", "destination": "/", "statusCode": 301 },
-        { "source": "/studio/", "destination": "/", "statusCode": 301 },
-        { "source": "/studio/:path*", "destination": "/", "statusCode": 301 },
-        { "source": "/systems", "destination": "/", "statusCode": 301 },
-        { "source": "/systems/", "destination": "/", "statusCode": 301 },
-        { "source": "/systems/:path*", "destination": "/", "statusCode": 301 },
-        { "source": "/advisory", "destination": "/", "statusCode": 301 },
-        { "source": "/advisory/", "destination": "/", "statusCode": 301 },
-        { "source": "/advisory/:path*", "destination": "/", "statusCode": 301 }
-    ]
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/divisions",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/divisions/",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/divisions/:path*",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/studio",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/studio/",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/studio/:path*",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/systems",
+      "destination": "/services/#automation",
+      "statusCode": 301
+    },
+    {
+      "source": "/systems/",
+      "destination": "/services/#automation",
+      "statusCode": 301
+    },
+    {
+      "source": "/systems/:path*",
+      "destination": "/services/#automation",
+      "statusCode": 301
+    },
+    {
+      "source": "/advisory",
+      "destination": "/services/#assessment",
+      "statusCode": 301
+    },
+    {
+      "source": "/advisory/",
+      "destination": "/services/#assessment",
+      "statusCode": 301
+    },
+    {
+      "source": "/advisory/:path*",
+      "destination": "/services/#assessment",
+      "statusCode": 301
+    },
+    {
+      "source": "/platforms",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/platforms/",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/platforms/:path*",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/restaurants",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/restaurants/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/restaurants/:path*",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/real-estate",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/real-estate/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/real-estate/:path*",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/investors",
+      "destination": "/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/investors/",
+      "destination": "/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/investors/:path*",
+      "destination": "/about/",
+      "statusCode": 301
+    }
+  ]
 }
