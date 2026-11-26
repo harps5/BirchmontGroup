@@ -2,78 +2,108 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
+      "source": "/services",
+      "destination": "/packages/",
+      "statusCode": 301
+    },
+    {
+      "source": "/services/",
+      "destination": "/packages/",
+      "statusCode": 301
+    },
+    {
+      "source": "/services/:path*",
+      "destination": "/packages/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing",
+      "destination": "/packages/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/",
+      "destination": "/packages/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/:path*",
+      "destination": "/packages/",
+      "statusCode": 301
+    },
+    {
       "source": "/divisions",
-      "destination": "/services/",
+      "destination": "/packages/",
       "statusCode": 301
     },
     {
       "source": "/divisions/",
-      "destination": "/services/",
+      "destination": "/packages/",
       "statusCode": 301
     },
     {
       "source": "/divisions/:path*",
-      "destination": "/services/",
+      "destination": "/packages/",
       "statusCode": 301
     },
     {
       "source": "/studio",
-      "destination": "/services/",
+      "destination": "/packages/",
       "statusCode": 301
     },
     {
       "source": "/studio/",
-      "destination": "/services/",
+      "destination": "/packages/",
       "statusCode": 301
     },
     {
       "source": "/studio/:path*",
-      "destination": "/services/",
+      "destination": "/packages/",
       "statusCode": 301
     },
     {
       "source": "/systems",
-      "destination": "/services/#automation",
+      "destination": "/packages/#sprint",
       "statusCode": 301
     },
     {
       "source": "/systems/",
-      "destination": "/services/#automation",
+      "destination": "/packages/#sprint",
       "statusCode": 301
     },
     {
       "source": "/systems/:path*",
-      "destination": "/services/#automation",
+      "destination": "/packages/#sprint",
       "statusCode": 301
     },
     {
       "source": "/advisory",
-      "destination": "/services/#assessment",
+      "destination": "/packages/#assessment",
       "statusCode": 301
     },
     {
       "source": "/advisory/",
-      "destination": "/services/#assessment",
+      "destination": "/packages/#assessment",
       "statusCode": 301
     },
     {
       "source": "/advisory/:path*",
-      "destination": "/services/#assessment",
+      "destination": "/packages/#assessment",
       "statusCode": 301
     },
     {
       "source": "/platforms",
-      "destination": "/services/",
+      "destination": "/packages/",
       "statusCode": 301
     },
     {
       "source": "/platforms/",
-      "destination": "/services/",
+      "destination": "/packages/",
       "statusCode": 301
     },
     {
       "source": "/platforms/:path*",
-      "destination": "/services/",
+      "destination": "/packages/",
       "statusCode": 301
     },
     {

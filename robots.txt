@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /payment/
 
-Sitemap: https://birchmontgroup.ca/sitemap.xml
+Sitemap: https://www.birchmontgroup.ca/sitemap.xml

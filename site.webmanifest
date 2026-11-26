@@ -10,5 +10,5 @@
     "theme_color": "#0d121c",
     "background_color": "#0d121c",
     "display": "standalone",
-    "start_url": "/"
+    "start_url": "/", "description": "Practical AI for small and mid-sized businesses."
 }

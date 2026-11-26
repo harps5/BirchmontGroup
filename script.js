@@ -4,7 +4,11 @@
 
     // --- Nav: solid on scroll ---
     var nav = document.getElementById('nav');
-    function onScroll() { if (nav) nav.classList.toggle('is-scrolled', window.scrollY > 24); }
+    var mobileCta = document.querySelector('.mobile-cta');
+    function onScroll() {
+        if (nav) nav.classList.toggle('is-scrolled', window.scrollY > 24);
+        if (mobileCta) mobileCta.classList.toggle('is-visible', window.scrollY > 560);
+    }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
